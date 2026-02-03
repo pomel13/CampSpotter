@@ -1,72 +1,94 @@
 # CampSpotter 🏕️
 
+> 🇷🇺 Русская версия ниже  
+> 🇺🇸 English version below
+
+CampSpotter is a web service for discovering and sharing wild camping spots.
+
+---
+
+## 🇷🇺 О проекте
+
+**CampSpotter** — это веб-сервис для поиска и обмена дикими местами для кемпинга.
+
+Проект ориентирован на путешественников, кемперов и любителей отдыха на природе, которым интересны **реальные, некоммерческие локации**:
+- без бронирования
+- без инфраструктуры
+- просто точки, куда можно приехать с палаткой
+
+Пользователи могут просматривать кемпинг-локации, изучать фотографии, читать комментарии, ставить оценки и делиться собственными находками.
+
+Проект создаётся в первую очередь для русскоязычной аудитории, где ниша кемпинга и диких стоянок пока слабо развита.
+
+---
+
+## 🇺🇸 About the Project
+
 **CampSpotter** is a web service for discovering and sharing wild camping spots.
 
-Users can explore camping locations, view photos, leave comments, rate spots, and contribute new locations to the community.
+The project is focused on campers, travelers and outdoor enthusiasts who are looking for **non-commercial, wild locations**:
+- no booking required
+- no infrastructure
+- just real places in nature where you can camp
 
-The project is focused on **wild, non-commercial camping locations** — places without booking, infrastructure or official campgrounds.
+Users can explore camping spots, view photos, leave comments, rate locations and add new places they have discovered.
 
----
-
-## 🌍 Project Idea
-
-CampSpotter is designed for campers, travelers and outdoor enthusiasts who are looking for **real places in nature**, not commercial campsites.
-
-Main goals:
-- create an open catalog of wild camping spots
-- allow users to share real experiences
-- build a community-driven map of places worth visiting
+The service is primarily designed for the Russian-speaking audience, where wild camping infrastructure and community-driven platforms are still underdeveloped.
 
 ---
 
-## 🚀 Core Features
+## 🚀 Основные возможности / Core Features
 
-- 📍 Camping spots with location data
-- 🖼️ Photos for each spot
-- ⭐ Rating system
-- 💬 Comments (authorized users only)
-- ➕ Add new camping spots
-- 🔐 Authentication with JWT
-
----
-
-## 🛠️ Tech Stack
-
-> _This section will be updated as the project evolves_
-
-- Backend: _(planned)_  
-- Frontend: _(planned)_  
-- Authentication: JWT  
-- Database: _(planned)_  
+- 📍 Кемпинг-локации с координатами  
+- 🖼️ Фотографии мест  
+- ⭐ Рейтинги локаций  
+- 💬 Комментарии (для авторизованных пользователей)  
+- ➕ Добавление новых мест  
+- 🔐 Аутентификация с использованием JWT  
 
 ---
 
-## 📦 Project Status
+## 🛠️ Технологии / Tech Stack
 
-⚠️ **Work in progress**
+> Стек будет дополняться по мере развития проекта
 
-The project is currently in early development stage.
+**Backend**
+- Java
+- Spring Boot
+- JWT Authentication
 
----
-
-## 📌 Roadmap (draft)
-
-- [ ] User authentication
-- [ ] Camping spots CRUD
-- [ ] Ratings and comments
-- [ ] Image uploads
-- [ ] Interactive map
-- [ ] Moderation system
+**Frontend (planned)**
+- React
+- TypeScript
 
 ---
 
-## 🤝 Contribution
+## 📦 Статус проекта / Project Status
 
-This is a personal pet project.  
-Contributions, ideas and feedback are welcome.
+🚧 **В разработке / Work in progress**
+
+Проект находится на ранней стадии разработки и активно развивается.
 
 ---
 
-## 📄 License
+## 🗺️ Roadmap (draft)
+
+- [ ] Базовая аутентификация пользователей  
+- [ ] CRUD для кемпинг-локаций  
+- [ ] Комментарии и рейтинги  
+- [ ] Загрузка изображений  
+- [ ] Интерактивная карта  
+- [ ] Минимальная модерация контента  
+
+---
+
+## 🤝 Участие / Contribution
+
+Проект разрабатывается как pet-проект.  
+Идеи, предложения и обратная связь приветствуются.
+
+---
+
+## 📄 Лицензия / License
 
 MIT License
