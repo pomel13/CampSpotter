@@ -11,10 +11,10 @@ import java.util.Set;
 
 /**
  * Represents a physical camping location.
- *
+ * <p>
  * A location belongs to a specific post and describes
  * a point on a route or a camping spot.
- *
+ * <p>
  * Contains geographical data, terrain characteristics,
  * and metadata required for map-based search.
  */
