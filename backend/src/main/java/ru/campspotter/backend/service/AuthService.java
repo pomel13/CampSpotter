@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import ru.campspotter.backend.dto.auth.AuthResponse;
 import ru.campspotter.backend.dto.auth.LoginRequest;
 import ru.campspotter.backend.dto.auth.RegisterRequest;
-import ru.campspotter.backend.dto.user.UserResponseDTO;
+import ru.campspotter.backend.dto.user.UserResponse;
 import ru.campspotter.backend.model.entity.User;
 import ru.campspotter.backend.model.mapper.UserMapper;
 import ru.campspotter.backend.repository.UserRepository;
@@ -25,7 +25,7 @@ public class AuthService {
         this.authenticationManager = authenticationManager;
     }
 
-    public UserResponseDTO register(RegisterRequest request) {
+    public UserResponse register(RegisterRequest request) {
 
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new RuntimeException("Email already exists");

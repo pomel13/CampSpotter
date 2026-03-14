@@ -4,7 +4,7 @@ import ru.campspotter.backend.model.enums.Role;
 
 import java.time.LocalDateTime;
 
-public class UserResponseDTO {
+public class UserResponse {
 
     private Long id;
     private String email;
@@ -12,7 +12,7 @@ public class UserResponseDTO {
     private Role role;
     private LocalDateTime createdAt;
 
-    public UserResponseDTO(Long id, String email, String username, Role role, LocalDateTime createdAt) {
+    public UserResponse(Long id, String email, String username, Role role, LocalDateTime createdAt) {
         this.id = id;
         this.email = email;
         this.username = username;

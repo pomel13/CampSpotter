@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.campspotter.backend.dto.auth.AuthResponse;
 import ru.campspotter.backend.dto.auth.LoginRequest;
 import ru.campspotter.backend.dto.auth.RegisterRequest;
-import ru.campspotter.backend.dto.user.UserResponseDTO;
+import ru.campspotter.backend.dto.user.UserResponse;
 import ru.campspotter.backend.service.AuthService;
 
 @RestController
@@ -22,7 +22,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public UserResponseDTO register(@RequestBody @Valid RegisterRequest request) {
+    public UserResponse register(@RequestBody @Valid RegisterRequest request) {
         return authService.register(request);
     }
 
