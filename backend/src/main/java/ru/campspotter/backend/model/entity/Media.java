@@ -1,7 +1,6 @@
 package ru.campspotter.backend.model.entity;
 
 import jakarta.persistence.*;
-import ru.campspotter.backend.model.enums.MediaStatus;
 import ru.campspotter.backend.model.enums.MediaType;
 
 /**
@@ -38,12 +37,6 @@ public class Media extends BaseEntity {
     @Column(nullable = false)
     private MediaType type;
 
-    /**
-     * Moderation status of media.
-     */
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private MediaStatus status = MediaStatus.PENDING;
 
     /**
      * Order of media inside post.
@@ -123,10 +116,6 @@ public class Media extends BaseEntity {
 
     public MediaType getType() {
         return type;
-    }
-
-    public MediaStatus getStatus() {
-        return status;
     }
 
     public Integer getOrderIndex() {
