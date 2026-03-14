@@ -12,7 +12,13 @@ import ru.campspotter.backend.model.enums.MediaType;
  * Physical files are stored in cloud object storage (S3-compatible).
  */
 @Entity
-@Table(name = "media")
+@Table(
+        name = "media",
+        indexes = {
+                @Index(name = "idx_media_post", columnList = "post_id"),
+                @Index(name = "idx_media_post_order", columnList = "post_id, orderIndex")
+        }
+)
 public class Media extends BaseEntity {
 
     @Id
@@ -51,7 +57,7 @@ public class Media extends BaseEntity {
      * Optional.
      */
     @Column(nullable = false)
-    private boolean cover = false;
+    private Boolean cover = false; // Business rule: only one media per post can be marked as cover
 
     /**
      *  Size of file in bytes.
