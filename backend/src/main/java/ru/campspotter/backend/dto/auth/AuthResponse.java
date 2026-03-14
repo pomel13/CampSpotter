@@ -1,4 +1,4 @@
-package ru.campspotter.backend.model.dto.auth;
+package ru.campspotter.backend.dto.auth;
 
 public class AuthResponse {
 

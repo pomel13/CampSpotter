@@ -1,4 +1,4 @@
-package ru.campspotter.backend.model.dto.post;
+package ru.campspotter.backend.dto.post;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

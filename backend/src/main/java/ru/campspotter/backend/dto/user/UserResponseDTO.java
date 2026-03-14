@@ -1,4 +1,4 @@
-package ru.campspotter.backend.model.dto.user;
+package ru.campspotter.backend.dto.user;
 
 import ru.campspotter.backend.model.enums.Role;
 

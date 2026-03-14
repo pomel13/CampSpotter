@@ -1,7 +1,7 @@
 package ru.campspotter.backend.service;
 
 import org.springframework.stereotype.Service;
-import ru.campspotter.backend.model.dto.post.CreatePostRequest;
+import ru.campspotter.backend.dto.post.CreatePostRequest;
 import ru.campspotter.backend.model.entity.Post;
 import ru.campspotter.backend.model.entity.User;
 import ru.campspotter.backend.model.enums.PostStatus;

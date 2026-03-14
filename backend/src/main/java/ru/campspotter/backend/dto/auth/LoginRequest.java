@@ -1,4 +1,4 @@
-package ru.campspotter.backend.model.dto.auth;
+package ru.campspotter.backend.dto.auth;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

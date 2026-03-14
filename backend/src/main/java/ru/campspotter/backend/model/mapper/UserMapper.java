@@ -1,6 +1,6 @@
 package ru.campspotter.backend.model.mapper;
 
-import ru.campspotter.backend.model.dto.user.UserResponseDTO;
+import ru.campspotter.backend.dto.user.UserResponseDTO;
 import ru.campspotter.backend.model.entity.User;
 
 public class UserMapper {

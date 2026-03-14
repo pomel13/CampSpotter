@@ -2,10 +2,10 @@ package ru.campspotter.backend.service;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.campspotter.backend.model.dto.auth.AuthResponse;
-import ru.campspotter.backend.model.dto.auth.LoginRequest;
-import ru.campspotter.backend.model.dto.auth.RegisterRequest;
-import ru.campspotter.backend.model.dto.user.UserResponseDTO;
+import ru.campspotter.backend.dto.auth.AuthResponse;
+import ru.campspotter.backend.dto.auth.LoginRequest;
+import ru.campspotter.backend.dto.auth.RegisterRequest;
+import ru.campspotter.backend.dto.user.UserResponseDTO;
 import ru.campspotter.backend.model.entity.User;
 import ru.campspotter.backend.model.mapper.UserMapper;
 import ru.campspotter.backend.repository.UserRepository;

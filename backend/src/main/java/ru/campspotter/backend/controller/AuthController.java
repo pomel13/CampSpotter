@@ -5,11 +5,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.campspotter.backend.model.dto.auth.AuthResponse;
-import ru.campspotter.backend.model.dto.auth.LoginRequest;
-import ru.campspotter.backend.model.dto.auth.RegisterRequest;
-import ru.campspotter.backend.model.dto.user.UserResponseDTO;
-import ru.campspotter.backend.model.entity.User;
+import ru.campspotter.backend.dto.auth.AuthResponse;
+import ru.campspotter.backend.dto.auth.LoginRequest;
+import ru.campspotter.backend.dto.auth.RegisterRequest;
+import ru.campspotter.backend.dto.user.UserResponseDTO;
 import ru.campspotter.backend.service.AuthService;
 
 @RestController
