@@ -1,14 +1,9 @@
 package ru.campspotter.backend.dto.auth;
 
-public class AuthResponse {
-
-    private String token;
-
-    public AuthResponse(String token) {
-        this.token = token;
-    }
-
-    public String getToken() {
-        return token;
-    }
-}
+/**
+ * Authentication response after login.
+ */
+public record AuthResponse(
+        String accessToken,
+        String refreshToken
+) {}

@@ -1,12 +1,14 @@
 package ru.campspotter.backend.controller;
 
 import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.campspotter.backend.dto.auth.AuthResponse;
 import ru.campspotter.backend.dto.auth.LoginRequest;
+import ru.campspotter.backend.dto.auth.RefreshRequest;
 import ru.campspotter.backend.dto.auth.RegisterRequest;
 import ru.campspotter.backend.dto.user.UserResponse;
 import ru.campspotter.backend.service.AuthService;
@@ -31,4 +33,12 @@ public class AuthController {
         return authService.login(request);
     }
 
+    @PostMapping("/refresh")
+    public ResponseEntity<AuthResponse> refreshToken(
+            @RequestBody RefreshRequest request
+            ) {
+        AuthResponse response = authService.refreshToken(request);
+
+        return ResponseEntity.ok(response);
+    }
 }
