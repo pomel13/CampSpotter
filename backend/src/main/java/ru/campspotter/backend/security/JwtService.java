@@ -63,7 +63,7 @@ public class JwtService {
                 .setIssuedAt(new Date())
 
                 // Token expiration time (24 hours)
-                .setExpiration(new Date(System.currentTimeMillis() + jwtProperties.getExpiration()))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtProperties.getAccessToken().getExpiration()))
 
                 // Signing the token
                 .signWith(getSigningKey())

@@ -8,7 +8,21 @@ import org.springframework.stereotype.Component;
 public class JwtProperties {
 
     private String secret;
-    private long expiration;
+
+    private Token accessToken = new Token();
+    private Token refreshToken = new Token();
+
+    public static class Token {
+        private long expiration;
+
+        public long getExpiration() {
+            return expiration;
+        }
+
+        public void setExpiration(long expiration) {
+            this.expiration = expiration;
+        }
+    }
 
     public String getSecret() {
         return secret;
@@ -18,11 +32,19 @@ public class JwtProperties {
         this.secret = secret;
     }
 
-    public long getExpiration() {
-        return expiration;
+    public Token getAccessToken() {
+        return accessToken;
     }
 
-    public void setExpiration(long expiration) {
-        this.expiration = expiration;
+    public void setAccessToken(Token accessToken) {
+        this.accessToken = accessToken;
+    }
+
+    public Token getRefreshToken() {
+        return refreshToken;
+    }
+
+    public void setRefreshToken(Token refreshToken) {
+        this.refreshToken = refreshToken;
     }
 }

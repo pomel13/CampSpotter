@@ -1,6 +1,8 @@
 package ru.campspotter.backend.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import ru.campspotter.backend.config.JwtProperties;
 import ru.campspotter.backend.model.entity.RefreshToken;
 import ru.campspotter.backend.model.entity.User;
 import ru.campspotter.backend.repository.RefreshTokenRepository;
@@ -15,14 +17,11 @@ import java.util.UUID;
 public class RefreshTokenService {
 
     private final RefreshTokenRepository refreshTokenRepository;
+    private final JwtProperties jwtProperties;
 
-    /**
-     * RefreshToken lifetime (7 days).
-     */
-    private final long refreshTokenDuration = 7 * 24 * 60 * 60;
-
-    public RefreshTokenService(RefreshTokenRepository refreshTokenRepository) {
+    public RefreshTokenService(RefreshTokenRepository refreshTokenRepository, JwtProperties jwtProperties) {
         this.refreshTokenRepository = refreshTokenRepository;
+        this.jwtProperties = jwtProperties;
     }
 
     /**
@@ -32,10 +31,13 @@ public class RefreshTokenService {
 
         String tokenValue = UUID.randomUUID().toString();
 
+        long refreshTokenDurationMs =
+                jwtProperties.getRefreshToken().getExpiration();
+
         RefreshToken refreshToken = new RefreshToken(
                 tokenValue,
                 user,
-                Instant.now().plusSeconds(refreshTokenDuration)
+                Instant.now().plusMillis(refreshTokenDurationMs)
         );
 
         return refreshTokenRepository.save(refreshToken);
